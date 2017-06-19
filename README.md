@@ -1,4 +1,4 @@
-# Bioinformatics-BC
+# Bioinformatics Breakfast Club
 Jupyter notebook tutorial
 
 http://jupyter.org/
