@@ -1,4 +1,4 @@
-#practice on gut hub, script allows you to get a list of 3 kmers
+#practice on github-fetch-push-pull-, script allows you to get a list of 3 kmers
 string='AAAGGG'
 n = len('AAAGGG')
 k=3
