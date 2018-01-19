@@ -10,3 +10,5 @@
 ### Create a username and password that is easy for you to type. For the rest of this exercise, you will need to be logged into GitHub.
 ### Let's follow this [tutorial](https://guides.github.com/activities/hello-world/)
 ### Simple break down of how to use guthub https://guides.github.com/introduction/flow/
+
+##### Pedro J. Torres
