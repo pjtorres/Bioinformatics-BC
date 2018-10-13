@@ -20,4 +20,5 @@ esearch  -db "nucleotide" -query "Bacteria[Organism] AND Refseq[Filter]" | efetc
 ```
 
 [Great resource for downloading Entrez on your compute](https://dataguide.nlm.nih.gov/edirect/install.html)
+
 [Tips on efetch values](https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__retmode_and/?report=objectonly)
