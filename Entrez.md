@@ -1,4 +1,4 @@
-I use NCBI Entrez Direct UNIX E-utilities regularly for sequence and data retrieval from NCBI. These UNIX utils can be combined with any UNIX commands
+I use [NCBI Entrez Direct UNIX E-utilities regularly](https://www.ncbi.nlm.nih.gov/books/NBK179288/) for sequence and data retrieval from NCBI. These UNIX utils can be combined with any UNIX commands
 
 # Looking for specific bugs:
 ```bash
@@ -20,3 +20,4 @@ esearch  -db "nucleotide" -query "Bacteria[Organism] AND Refseq[Filter]" | efetc
 ```
 
 [Great resource for downloading Entrez on your compute](https://dataguide.nlm.nih.gov/edirect/install.html)
+[Tips on efetch values](https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__retmode_and/?report=objectonly)
