@@ -45,7 +45,7 @@ GitHub is primarily a web platform, which hosts code repositories along with dis
  <img src="./figures/drake.png" width="550">
 </p>
 
-#### GitHub users now get unlimited private repositories with up to three collaborators.
+### GitHub users now get unlimited private repositories with up to three collaborators.
 
 
 **Create a username and password that is easy for you to type. For the rest of this exercise, you will need to be logged into GitHub.
