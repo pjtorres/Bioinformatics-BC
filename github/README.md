@@ -21,13 +21,13 @@ It would be nice to have some sort of version control system that allows you to 
 
 **GitHub is a popular platform that allows for version control and collaboration***
 <p align="right">
- <img src="./figures/GitHub-Mark.png" width="200">
+ <img src="./figures/GitHub-Mark.png">
 </p>
 
 ### What is GitHub?:
 GitHub is primarily a web platform, which hosts code repositories along with distributed version control. Today, almost every developer working on a group project or individually uses GitHub as an important tool due to its capability of making version control easier. It provides access control and several collaboration features such as bug tracking, feature requests, task management for every project. It's a great place where you can store and/or share your code, manage projects and publish code. 
 
-***GitHub essentials are:***
+**GitHub essentials are:**
 1. Repositories
    a. Used to organize a single project. Contains folders, files, images ect. *Always include a README, or a file with information about your project. 
 2. Branching
@@ -39,9 +39,9 @@ GitHub is primarily a web platform, which hosts code repositories along with dis
 5. Merge Pull request
    a. Final step, time to bring  your changes together.
    
-***The three main features to the basic GitHub flow that make GitHub so widely used and powerful – branching, pull request and merge.*** 
+**The three main features to the basic GitHub flow that make GitHub so widely used and powerful – branching, pull request and merge.** 
 
-<p align="right">
+<p align="center">
  <img src="./figures/drake.png" width="400">
 </p>
 
