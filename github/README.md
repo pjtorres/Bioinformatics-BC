@@ -15,6 +15,7 @@ Just as experiments are logged in laboratory notebooks, it is important to docum
 1. Experiment with new ideas such as adding new features to a script, but we don't want to risk breaking currently working code.
 
 **You will likely share your code with others**
+
 2. Shared code can be improved upon by collaborators or others in the community, but we don't want to have multiple people emailing you code improvements or else you will lose track and will have to manually incorporate the changes.
  
 It would be nice to have some sort of version control system that allows you to play with your code, while still having the ***old*** working code intact and running. Or a place to recieve code suggestions and check it before incorporating it.
