@@ -24,6 +24,7 @@ It would be nice to have some sort of version control system that allows you to 
 <p align="center">
  <img src="./figures/GitHub-Mark.png " width="100">
 </p>
+
 ### What is GitHub?:
 GitHub is primarily a web platform, which hosts code repositories along with distributed version control. Today, almost every developer working on a group project or individually uses GitHub as an important tool due to its capability of making version control easier. It provides access control and several collaboration features such as bug tracking, feature requests, task management for every project. It's a great place where you can store and/or share your code, manage projects and publish code. 
 
@@ -44,11 +45,12 @@ GitHub is primarily a web platform, which hosts code repositories along with dis
  <img src="./figures/drake.png" width="550">
 </p>
 
-GitHub users now get unlimited private repositories with up to three collaborators.
+####GitHub users now get unlimited private repositories with up to three collaborators.
 
-#### Create a username and password that is easy for you to type. For the rest of this exercise, you will need to be logged into GitHub.
+
+**Create a username and password that is easy for you to type. For the rest of this exercise, you will need to be logged into GitHub.
 GitHub.com uses its own version of the Markdown syntax. Here is a great tutorial/cheat sheet on the markdown syntax by [@thanpolas](https://github.com/thanpolas/Practice/blob/master/Markdown-Cheatsheet.md)
 Extra [tutorial](https://guides.github.com/activities/hello-world/)
-Simple break down of how to use [GitHub](https://guides.github.com/introduction/flow/)
+Simple break down of how to use [GitHub](https://guides.github.com/introduction/flow/)**
 
 ### Pedro J. Torres
