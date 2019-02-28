@@ -49,9 +49,12 @@ GitHub is primarily a web platform, which hosts code repositories along with dis
 
 
 **Create a username and password that is easy for you to type. For the rest of this exercise, you will need to be logged into GitHub.
-GitHub.com uses its own version of the Markdown syntax.***
-Here is a great tutorial/cheat sheet on the markdown syntax by [@thanpolas](https://github.com/thanpolas/Practice/blob/master/Markdown-Cheatsheet.md)
-Extra [tutorial](https://guides.github.com/activities/hello-world/)
-Simple break down of how to use [GitHub](https://guides.github.com/introduction/flow/)
+GitHub.com uses its own version of the Markdown syntax.**
+
+-Here is a great tutorial/cheat sheet on the markdown syntax by [@thanpolas](https://github.com/thanpolas/Practice/blob/master/Markdown-Cheatsheet.md)
+
+-Extra [tutorial](https://guides.github.com/activities/hello-world/)
+
+-Simple break down of how to use [GitHub](https://guides.github.com/introduction/flow/)
 
 ### Pedro J. Torres
