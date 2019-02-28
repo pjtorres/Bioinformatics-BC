@@ -1,6 +1,6 @@
 # GitHub tutorial 
 
-![GitHub Logo](/figures/labnotebook.jpg)
+![GitHub Logo](./figures/labnotebook.jpg)
 Format: ![Alt Text](url)
 
 ### GitHub is primarily a web platform, which hosts code repositories along with distributed version control. Today, almost every developer working on a group project or individually uses GitHub as an important tool due to its capability of making version control easier. It provides access control and several collaboration features such as bug tracking, feature requests, task management for every project. It's a great place where you can store and share your code, manage projects and publish code. 
