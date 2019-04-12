@@ -1,4 +1,4 @@
-# Bioinformatics Breakfast Club
+# SDSU Bioinformatics Breakfast Club
 Jupyter notebook tutorial
 
 http://jupyter.org/
