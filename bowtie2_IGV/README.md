@@ -18,6 +18,8 @@
 
 `bowtie2 --local -N 1 -x index/<genome> -f <read>.fna -S <read>.sam` 
 
+# Now finish up and prepping for IGV
+
 ## Convert to bam
 `samtools view -S -b <read>.sam > <read>.bam`
 
