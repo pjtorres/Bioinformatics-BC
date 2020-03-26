@@ -1,0 +1,33 @@
+# Looking at genomic polymorphisms
+
+## Building bowtie index
+
+`bowtie2-build <genome>.fa index/<genome>`
+## always go to inspect and make sure everyting was built properly
+
+`bowtie2-inspect -s index/<genome>`
+
+# bowtie2 --end-to-end is if you are comapring the same genomes - perhaps assembled differentyl
+## Bowtie -  for fastq
+`bowtie2 --end-to-end -x index/<genome> -1 <read_R1>.fq -2 <read_R2>.fq  -S <read>.sam`
+
+## for fna
+`bowtie2 --end-to-end   -x index/<genome>  -f  <read>.fna  -S <read>.sam`
+
+# bowtie2 --local is if you are comparing like organisms 
+
+`bowtie2 --local -N 1 -x index/<genome> -f <read>.fna -S <read>.sam` 
+
+## Convert to bam
+`samtools view -S -b <read>.sam > <read>.bam`
+
+## sort samtools
+`samtools sort <read>.bam >  <read>.sorted.bam`
+
+## index 
+`samtools index <read>.bam`
+
+You will now have two important files needed for IGV that is the <read>.sorted.bam and <read>.sorted.bam.bai
+
+## igv
+now you can always download the fna whole genome file and then load to IGV by 1. click on load genome, 2. load genome from file and click on the genome. Then you can download the associated gff file and load that by clicking on file and then load from file. This will result in the genome size on top and the ORFs on the bottom. Remember to use the same genome used for bowtie2 aligning as what is in the gff file.  
