@@ -26,6 +26,9 @@
 ## sort samtools
 `samtools sort <read>.bam >  <read>.sorted.bam`
 
+## full script
+`python pull_COVID19_reads_to_bowtie.py -l bioinfo-prod/centrifuge_taxa_output -s 1B9122304251 -i index/COVID_refseq`
+
 ## index 
 `samtools index <read>.bam`
 
