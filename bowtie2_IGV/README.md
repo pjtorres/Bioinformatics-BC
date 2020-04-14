@@ -36,3 +36,10 @@ You will now have two important files needed for IGV that is the <read>.sorted.b
 
 ## igv
 now you can always download the fna whole genome file and then load to IGV by 1. click on load genome, 2. load genome from file and click on the genome. Then you can download the associated gff file and load that by clicking on file and then load from file. This will result in the genome size on top and the ORFs on the bottom. Remember to use the same genome used for bowtie2 aligning as what is in the gff file.  Once you have loaded your reference genome, click on the file tab on top of IV and load from file. Go to your folder which should have your <read>.bam and <read>.bam.bai files in it and click on the bam. You should now be able to visualize your read coverage. 
+  
+## What is you would like to get a file showing the bp and coverage at that position and then graph it yourself. This is handy when you have a lot of reads and want to quantify the coverage a bit better. 
+
+## bedtools is a great tool
+` bedtools genomecov -ibam <read>.sorted.bam -d | awk '$3>1' > <read>.sorted.bam.genomeCov.txt`
+
+You will get a text file with the name of each alignment query and the bp position as well as how many times you had a bp align to it. You can now use this text file and put thorugh R or python and make your own coverage plots focusing on a gene of interest.
