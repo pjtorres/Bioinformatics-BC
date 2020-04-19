@@ -3,7 +3,7 @@ set -eu -o pipefail
 
 date
 
-#Created: 2020-03-14
+#Created: 2020-04-15
 # Author: Pedro J. Torres
 # Last update: Never
 
@@ -97,28 +97,28 @@ fi
 #2. include reads mapped in proper pair (-f 2)
 echo -e "Converting bam to sam and inclduing reads mapped in proper pair."
 samtools view -F 12 -f 2 $prefix.starAligned.toTranscriptome.out.bam > $prefix.mapped.toTranscriptome.out.sam &&
-samtools view -F 12 -f 2 $prefix.starAligned.sortedByCoord.out.bam   > $prefix.mapped.toCoord.out.sam &&
+samtools view -F 12 -f 2 $prefix.starAligned.sortedByCoord.out.bam  > $prefix.mapped.sortedByCoord.out.sam &&
 
 # Convert to bed file for simple fitlering later 
 echo -e "Converting sam to bed."
 awk '{print $1, 0,100,$0}' FS="\t"  OFS="\t" $prefix.mapped.toTranscriptome.out.sam > $prefix.awk.mapped.toTranscriptome.out.sam.bed &&
-awk '{print $1, 0,100,$0}' FS="\t"  OFS="\t" $prefix.mapped.toCoord.out.sam  >         $prefix.awk.mapped.toCoord.out.sam &&
+awk '{print $1, 0,100,$0}' FS="\t"  OFS="\t" $prefix.mapped.sortedByCoord.out.sam >         $prefix.awk.mapped.sortedByCoord.out.sam.bed &&
 
 # Sort above files 
 echo -e "Sorting bed files."
-sort -t $'\t' -k1,1  -k2,2n  -k3,3n  $prefix.awk.mapped.toTranscriptome.out.sam.bed > $prefix.sorted.awk.mapped.toTranscriptome.out.sam.bed &&
-sort -t $'\t' -k1,1  -k2,2n  -k3,3n  $prefix.awk.mapped.toCoord.out.sam             > $prefix.sorted.awk.mapped.toCoord.out.sam&&
+sort -t $'\t' -k1,1  -k2,2n  -k3,3n  $prefix.awk.mapped.toTranscriptome.out.sam.bed  > $prefix.sorted.awk.mapped.toTranscriptome.out.sam.bed &&
+sort -t $'\t' -k1,1  -k2,2n  -k3,3n  $prefix.awk.mapped.sortedByCoord.out.sam.bed    > $prefix.sorted.awk.mapped.sortedByCoord.out.sam.bed  &&
 
-rm $prefix.awk.mapped.toTranscriptome.out.sam.bed &&
-rm $prefix.awk.mapped.sortedByCoord.out.sam.bed &&
+#rm $prefix.awk.mapped.toTranscriptome.out.sam.bed &&
+#rm $prefix.awk.mapped.sortedByCoord.out.sam.bed &&
 
 # filter out the Coordinate gile to either only include reads that alinged to known human
 # trancripts or that are unqiue to only the human genome : 
 # -v Only report those entries in A that have no overlap in B
 # -wa Write the original entry in A for each overlap
 echo -e "Using bedtools."
-bedtools intersect -v -sorted -a $prefix.sorted.awk.mapped.sortedByCoord.out.sam.bed  -b $prefix.sorted.awk.mapped.toTranscriptome.out.sam.bed  > $prefix.NA.trancriptome.sorted.awk.mapped.sortedByCoord.out.sam.bed &&
-bedtools intersect -v -sorted -a $prefix.sorted.awk.mapped.sortedByCoord.out.sam.bed -b  $prefix.NA.trancriptome.sorted.awk.mapped.sortedByCoord.out.sam.bed > 2GEIS8.IN.trancriptome.sorted.awk.mapped.sortedByCoord.out.sam.bed
+bedtools intersect -v -a $prefix.sorted.awk.mapped.sortedByCoord.out.sam.bed  -b $prefix.sorted.awk.mapped.toTranscriptome.out.sam.bed > $prefix.NA.trancriptome.sorted.awk.mapped.sortedByCoord.out.sam.bed &&
+bedtools intersect -v -sorted -a $prefix.sorted.awk.mapped.sortedByCoord.out.sam.bed -b  $prefix.NA.trancriptome.sorted.awk.mapped.sortedByCoord.out.sam.bed  > $prefix.IN.trancriptome.sorted.awk.mapped.sortedByCoord.out.sam.bed
 
 # covert filtered bed files back to sam
 echo -e "Converting bed back to sam file"
