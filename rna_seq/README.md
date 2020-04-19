@@ -28,7 +28,7 @@ and its associated gtf file
 1. <sample_prefix>.IN.transcript - bam and bai file with reads alinging to human trancriptome 
 2. <sample_prefix>.NA.trancript.IN.genome - bam and bai file with reads aligning to human genome but not transcriptome
 
-# If you want a quicker pseudo mapping alternative, that doesn’t align to the human genome but quickly to the human transcriptome. You can use Salmon. The results will account for GC bias, and will count the transcripts and genome for you using an expectation maximization algorithm to deal with multi-mapped transcripts. Below is an example script you can use
+## If you want a quicker pseudo mapping alternative, that doesn’t align to the human genome but quickly to the human transcriptome. You can use Salmon. The results will account for GC bias, and will count the transcripts and genome for you using an expectation maximization algorithm to deal with multi-mapped transcripts. Below is an example script you can use
 
 ```bash
 salmon quant			\
