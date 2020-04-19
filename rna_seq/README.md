@@ -30,7 +30,7 @@ and its associated gtf file
 
 # If you want a quicker pseudo mapping alternative, that doesn’t align to the human genome but quickly to the human transcriptome. You can use Salmon. The results will account for GC bias, and will count the transcripts and genome for you using an expectation maximization algorithm to deal with multi-mapped transcripts. Below is an example script you can use
 
-`bash
+```bash
 salmon quant			\
 --libType	$libtypesalmon	\
 -i		"$indexdir"	$infqarg	\
@@ -40,4 +40,5 @@ salmon quant			\
 -g		"$genemapfile"	\
 --discardOrphansQuasi		\
 --validateMappings		\
--o		"$outdir"	`
+-o		"$outdir"	
+```
