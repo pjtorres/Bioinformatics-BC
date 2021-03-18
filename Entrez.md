@@ -18,6 +18,10 @@ esearch -db gene -query "Liver cancer AND Homo sapiens" |elink -target nuccore |
 ```bash
 esearch  -db "nucleotide" -query "Bacteria[Organism] AND Refseq[Filter]" | efetch -format fasta  
 ```
+# download based on accession
+```bash
+esearch -db assembly -query GCF_000508965.1 | elink -target nucleotide -name assembly_nuccore_insdc | efetch -format fasta > GCF_000508965.1.fna
+```
 
 [Great resource for downloading Entrez on your compute](https://dataguide.nlm.nih.gov/edirect/install.html)
 
