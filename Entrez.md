@@ -23,6 +23,11 @@ esearch  -db "nucleotide" -query "Bacteria[Organism] AND Refseq[Filter]" | efetc
 esearch -db assembly -query GCF_000508965.1 | elink -target nucleotide -name assembly_nuccore_insdc | efetch -format fasta > GCF_000508965.1.fna
 ```
 
+# get assembly status
+```bash
+search -db assembly -query "Veillonella sp. DNF00869" |  esummary |xtract -pattern DocumentSummary -element SpeciesName,assembly-status >> assembly_status.txt
+```
+
 [Great resource for downloading Entrez on your compute](https://dataguide.nlm.nih.gov/edirect/install.html)
 
 [Tips on efetch values](https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__retmode_and/?report=objectonly)
