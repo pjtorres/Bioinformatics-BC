@@ -28,6 +28,12 @@ esearch -db assembly -query GCF_000508965.1 | elink -target nucleotide -name ass
 search -db assembly -query "Veillonella sp. DNF00869" |  esummary |xtract -pattern DocumentSummary -element SpeciesName,assembly-status >> assembly_status.txt
 ```
 
+# get proteins
+```bash
+esearch -db "protein" -query "baif[gene]"   | efetch -format fasta  > test;  touch search ; echo baif > search ;awk -v RS="\n>" -v FS="\n" '$1 ~ /baif/  {print ">"$0}' test > Baib.faa
+
+```
+
 [Great resource for downloading Entrez on your compute](https://dataguide.nlm.nih.gov/edirect/install.html)
 
 [Tips on efetch values](https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__retmode_and/?report=objectonly)
