@@ -34,6 +34,10 @@ esearch -db "protein" -query "baif[gene]"   | efetch -format fasta  > test;  tou
 
 ```
 
+```bash
+esearch -db "protein" -query ACJ51375.1  | efetch -format  fasta >> humann2_hmo_genes.faa
+```
+
 [Great resource for downloading Entrez on your compute](https://dataguide.nlm.nih.gov/edirect/install.html)
 
 [Tips on efetch values](https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__retmode_and/?report=objectonly)
