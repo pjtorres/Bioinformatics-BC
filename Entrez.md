@@ -4,7 +4,10 @@ I use [NCBI Entrez Direct UNIX E-utilities regularly](https://www.ncbi.nlm.nih.g
 ```bash
 esearch -db "nucleotide" -query "Faecalibacterium prausnitzii[ORGN]"|  efetch -format fasta
 ```
-
+# Download genes using assembly accesion ID
+```bash
+esearch -db assembly -query  AP014658.1 | elink -target nuccore -name assembly_nuccore_insdc | efetch -format fasta_cds_na > B_longum_ldh4.genes.fna
+```
 # rhino virus:
 
 ```bash
